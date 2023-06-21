@@ -8,15 +8,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [characters, setCharacters] = useState([]);
+  const pageSize = 20;
+  const pages = Math.floor(7450 / pageSize);
 
   useEffect(() => {
     async function fetchData() {
       const data = await axios.get(
         `https://api.disneyapi.dev/character?page=${Math.ceil(
-          Math.random() * 1850
-        )}&pageSize=4`
+          Math.random() * pages
+        )}&pageSize=${pageSize}`
       );
-      console.log(data);
 
       setCharacters(data.data.data);
     }
@@ -40,7 +41,7 @@ export default function Home() {
           <SearchIcon className="cursor-pointer rounded-lg bg-[#5f0f40] text-4xl text-[#9a031e] transition-all duration-100 ease-in hover:opacity-90 hover:drop-shadow-xl sm:text-5xl lg:text-6xl" />
         </div>
       </div>
-      <div className="flex h-[50%] w-full flex-wrap overflow-hidden">
+      <div className="flex h-[50%] w-full flex-wrap justify-center overflow-hidden">
         {characters.map((character) => {
           return <CharacterCard key={character._id} id={character._id} />;
         })}

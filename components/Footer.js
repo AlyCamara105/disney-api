@@ -1,8 +1,11 @@
 function Footer() {
   return (
     <footer>
-      Footer
-      <div></div>
+      <ul>
+        <li>Home</li>
+        <li>Character Database</li>
+        <li>Contact</li>
+      </ul>
     </footer>
   );
 }
