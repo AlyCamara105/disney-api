@@ -5,3 +5,7 @@
 body {
   @apply bg-[#fb8b24] scrollbar-thin scrollbar-track-[#fb8b24] scrollbar-thumb-[#e36414] scrollbar-thumb-rounded-full scroll-smooth;
 }
+
+.MuiList-root {
+  @apply bg-gradient-to-r from-[#fb8b24] to-[#e36414]
+}

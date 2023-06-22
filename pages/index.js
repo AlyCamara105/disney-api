@@ -34,7 +34,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center">
           <input
-            className="rounded-md bg-[#e36414]/30 pl-1 text-2xl font-medium text-[#0f4c5c] outline-none drop-shadow-lg placeholder:text-[#0f4c5c] sm:rounded-r-none sm:text-3xl sm:leading-3 lg:text-4xl lg:leading-4"
+            className="rounded-md bg-[#e36414]/30 pl-1 text-2xl font-medium text-[#0f4c5c] outline-none drop-shadow-lg placeholder:text-[#0f4c5c] focus:bg-[#e36414]/60 sm:rounded-r-none sm:text-3xl sm:leading-3 lg:text-4xl lg:leading-4 transition duration-100"
             type="text"
             placeholder="Sleeping Beauty..."
           />
