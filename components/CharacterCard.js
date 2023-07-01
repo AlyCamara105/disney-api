@@ -18,7 +18,7 @@ function Character({ id }) {
   }, []);
 
   return (
-    <div className="relative m-1 flex h-[calc(50%-8px)] max-h-44 w-[calc(50%-8px)] max-w-[168px] overflow-hidden">
+    <div className="relative m-1 flex h-[calc(175px-8px)] w-[calc(175px-8px)] overflow-hidden">
       {(imgErrored || !imgLoaded) && (
         <div className="to- absolute left-0 top-0 h-full w-full rounded-md bg-gradient-to-r from-[#fb8b24] to-[#e36414]"></div>
       )}
@@ -44,4 +44,5 @@ function Character({ id }) {
     </div>
   );
 }
+
 export default Character;

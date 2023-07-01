@@ -3,6 +3,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -13,6 +14,17 @@ export default function BasicMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const router = useRouter();
+
+  function characterDatabaseClicked() {
+    router.push({
+      pathname: "/CharacterDatabase",
+      query: {
+        search: "",
+        page: 1,
+      },
+    });
+  }
 
   return (
     <div>
@@ -31,7 +43,10 @@ export default function BasicMenu() {
         <Link href="/CharacterDatabase">
           <MenuItem
             className="flex justify-center font-semibold text-[#0f4c5c]"
-            onClick={handleClose}
+            onClick={() => {
+              handleClose();
+              characterDatabaseClicked();
+            }}
           >
             Character Database
           </MenuItem>

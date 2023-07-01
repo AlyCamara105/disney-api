@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["e1.pxfuel.com", "static.wikia.nocookie.net"],
+    domains: ["e1.pxfuel.com", "static.wikia.nocookie.net",]
   },
 };
 
